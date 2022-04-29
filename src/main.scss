@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  
+  .base {
+    .foo, // NOTE: These grouped and nested rules causes the bug
+    .bar {
+        @apply bg-rose-600;
+    }
+  }
+}
+
