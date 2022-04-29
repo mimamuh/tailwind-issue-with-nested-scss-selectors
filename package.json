@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-issue-selector",
+  "name": "tailwind-issue-with-nested-scss-selectors",
   "version": "1.0.0",
-  "description": "Shocase an issue where tailwind doesn't generate proper css classes when using nested scss",
+  "description": "Shocase an issue where tailwind doesn't generate proper css classes when using nested scss selectors with Tailwind",
   "private": true,
   "scripts": {
     "dev": "webpack serve --open",
