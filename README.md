@@ -24,6 +24,19 @@ In our `./src/main.scss` we have a utility rule added to the `@components` layer
 }
 ```
 
+Then there is some _HTML_ `./index.html` using the new utilities together with a responsive utility variant `sm:`:
+
+```html
+<!-- This div uses the md:base here -->
+<div class="flex gap-4 md:base">
+  <!-- And the foo should render something red -->
+  <button class="p-2 border-2 border-zinc-600 foo">Should be red</button>
+  <!-- And also bar should render something red -->
+  <button class="p-2 border-2 border-zinc-600 bar">Should be red</button>
+  <button class="p-2 border-2 border-zinc-600">As is</button>
+</div>
+```
+
 As `.foo, .bar` is grouped, the generated _CSS_ of _Tailwind_ is this:
 
 ```css
@@ -48,4 +61,4 @@ Instead of this:
 }
 ```
 
-So basically: The breakpoint is not applied to the second nested utility (md:base -> .bar).
+**It basically applies the breakpoint only to the first grouped and nested utility `.md\:base .foo`, but not to the second `.base .bar`.**
