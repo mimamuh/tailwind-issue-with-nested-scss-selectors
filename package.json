@@ -4,8 +4,7 @@
   "description": "Shocase an issue where tailwind doesn't generate proper css classes when using nested scss",
   "private": true,
   "scripts": {
-    "watch": "webpack --watch",
-    "start": "webpack serve --open",
+    "dev": "webpack serve --open",
     "build": "webpack"
   },
   "author": "Michael Neumair <7q7w7e7r@gmail.com> (http://michaelneumair.de/)",

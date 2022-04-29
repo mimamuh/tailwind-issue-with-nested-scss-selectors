@@ -5,7 +5,10 @@
 @layer components {
   
   .base {
-    .foo, // NOTE: These grouped and nested rules causes the bug
+    /* NOTE: These grouped and nested rules causes the 
+    bug when the `base` utility is combined with a breakpoint 
+    like `md:base` */
+    .foo, 
     .bar {
         @apply bg-rose-600;
     }

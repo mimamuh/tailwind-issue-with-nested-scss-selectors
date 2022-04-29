@@ -6,12 +6,15 @@
   </head>
 
   <body>
-    <div>
+    <div class="p-4">
       <h2>Example:</h2>
-      <div class="flex md:gap-4 md:base">
-        <button class="p-2 foo">Should be red</button>
-        <button class="p-2 bar">Should be red</button>
-        <button class="p-2">As is</button>
+      <!-- This div uses the md:base here -->
+      <div class="flex gap-4 md:base">
+        <!-- And the foo should render something red -->
+        <button class="p-2 border-2 border-zinc-600 foo">Should be red</button>
+        <!-- And also bar should render something red -->
+        <button class="p-2 border-2 border-zinc-600 bar">Should be red</button>
+        <button class="p-2 border-2 border-zinc-600">As is</button>
       </div>
     </div>
   </body>
